@@ -1,0 +1,1 @@
+const e=document.querySelector("#menu"),n=document.querySelector("#menu-items");document.addEventListener("DOMContentLoaded",function(){t()});function t(){o()}function o(){e.addEventListener("click",()=>{n.classList.toggle("hidden")})}
