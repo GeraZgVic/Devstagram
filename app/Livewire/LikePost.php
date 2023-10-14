@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
+
 class LikePost extends Component
 {
     public $post;
@@ -18,7 +19,7 @@ class LikePost extends Component
 
     public function like() {
         if($this->post->checkLike(auth()->user())) {
-            $this->post->likes()->where('post_id', $this->post->id)->delete();
+            $this->post->likes()->where('post_id', $this->post->id)->where('user_id', auth()->user()->id)->delete();
             $this->isLike = false;
             $this->likes--;
         } else {

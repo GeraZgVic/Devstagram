@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
@@ -22,7 +21,6 @@ use App\Http\Controllers\ComentarioController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
@@ -46,9 +44,6 @@ Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('posts.d
 
 Route::post('/imagenes',[ImageController::class, 'store'])->name('imagenes.store');
 
-// // Likes a fotos
-// Route::post('/posts/{post}', [LikeController::class, 'store'])->name('posts.like.store');
-// Route::delete('/posts/{post}', [LikeController::class, 'destroy'])->name('posts.like.destroy');
 
 
 Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');

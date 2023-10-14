@@ -8,5 +8,10 @@
     "file": "assets/app-7580ce3b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/navbar.js": {
+    "file": "assets/navbar-8697b8ff.js",
+    "isEntry": true,
+    "src": "resources/js/navbar.js"
   }
 }
